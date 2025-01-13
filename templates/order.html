@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Details</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <a href="/" class="home-button">Go to Home Page</a>
+    
+    <h1>Order Details</h1>
+
+    <div class="section">
+        <h2>Order Information</h2>
+        <p><strong>Order UID:</strong> {{.OrderUID}}</p>
+        <p><strong>Track Number:</strong> {{.TrackNumber}}</p>
+        <p><strong>Entry:</strong> {{.Entry}}</p>
+        <p><strong>Locale:</strong> {{.Locale}}</p>
+        <p><strong>Internal Signature:</strong> {{.InternalSignature}}</p>
+        <p><strong>Customer ID:</strong> {{.CustomerID}}</p>
+        <p><strong>Delivery Service:</strong> {{.DeliveryService}}</p>
+        <p><strong>Shard Key:</strong> {{.Shardkey}}</p>
+        <p><strong>SM ID:</strong> {{.SmID}}</p>
+        <p><strong>Date Created:</strong> {{.DateCreated}}</p>
+        <p><strong>OOF Shard:</strong> {{.OOFShard}}</p>
+    </div>
+
+    <div class="section">
+        <h2>Delivery Information</h2>
+        <p><strong>Name:</strong> {{.Delivery.Name}}</p>
+        <p><strong>Phone:</strong> {{.Delivery.Phone}}</p>
+        <p><strong>Zip:</strong> {{.Delivery.Zip}}</p>
+        <p><strong>City:</strong> {{.Delivery.City}}</p>
+        <p><strong>Address:</strong> {{.Delivery.Address}}</p>
+        <p><strong>Region:</strong> {{.Delivery.Region}}</p>
+        <p><strong>Email:</strong> {{.Delivery.Email}}</p>
+    </div>
+
+    <div class="section">
+        <h2>Payment Information</h2>
+        <p><strong>Transaction:</strong> {{.Payment.Transaction}}</p>
+        <p><strong>Request ID:</strong> {{.Payment.RequestID}}</p>
+        <p><strong>Currency:</strong> {{.Payment.Currency}}</p>
+        <p><strong>Provider:</strong> {{.Payment.Provider}}</p>
+        <p><strong>Amount:</strong> {{.Payment.Amount}}</p>
+        <p><strong>Payment Date:</strong> {{.Payment.PaymentDT}}</p>
+        <p><strong>Bank:</strong> {{.Payment.Bank}}</p>
+        <p><strong>Delivery Cost:</strong> {{.Payment.DeliveryCost}}</p>
+        <p><strong>Goods Total:</strong> {{.Payment.GoodsTotal}}</p>
+        <p><strong>Custom Fee:</strong> {{.Payment.CustomFee}}</p>
+    </div>
+
+    <div class="section">
+        <h2>Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Chrt ID</th>
+                    <th>Track Number</th>
+                    <th>Price</th>
+                    <th>RID</th>
+                    <th>Name</th>
+                    <th>Sale</th>
+                    <th>Size</th>
+                    <th>Total Price</th>
+                    <th>NM ID</th>
+                    <th>Brand</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Items}}
+                <tr>
+                    <td>{{.ChrtID}}</td>
+                    <td>{{.TrackNumber}}</td>
+                    <td>{{.Price}}</td>
+                    <td>{{.RID}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Sale}}</td>
+                    <td>{{.Size}}</td>
+                    <td>{{.TotalPrice}}</td>
+                    <td>{{.NmID}}</td>
+                    <td>{{.Brand}}</td>
+                    <td>{{.Status}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

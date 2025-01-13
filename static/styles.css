@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Стили поиска */
+.search-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.search-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-container form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: #004099;
+}
+
+/* Стили для кнопки "Go to Home Page" */
+.home-button {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 10px; /* Отступ от верхнего края */
+    right: 30px; /* Отступ от правого края */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Цвет кнопки (синий) */
+    border: 1px solid #007bff; /* Обводка того же цвета */
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    z-index: 1000; /* Убедитесь, что кнопка находится поверх остального контента */
+}
+
+/* Эффект при наведении */
+.home-button:hover {
+    background-color: #0056b3; /* Темный синий при наведении */
+    border-color: #0056b3; /* Тот же темный синий цвет */
+}
+
+/* Эффект при активном состоянии */
+.home-button:active {
+    background-color: #004085; /* Еще более темный синий при нажатии */
+    border-color: #004085; /* Тот же темный синий цвет */
+}
+
+/* Дополнительные стили, если нужно */
+.home-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5); /* Эффект фокуса */
+}
+
+
+
